@@ -14,14 +14,34 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1px + 2vmin);
   color: white;
+  overflow: hidden;
+}
+
+.Comments {
+  position: relative;
+  z-index:2;
+}
+
+.Comment {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Comment-form {
+  padding: 25px;
+  border-style: groove;
+  background-color: black;
+  z-index:3;
+  /* border: white 2px; */
 }
 
 .App-link {
