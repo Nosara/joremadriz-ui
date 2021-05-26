@@ -1,46 +1,69 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './routes';
 import './App.css';
-import {useState} from 'react';
 import CommentService from './service/CommentService';
-import CommentForm from './components/CommentForm';
-import Comments from './components/Comments';
-import SocialLinks from './components/SocialLinks';
-import React, {useEffect} from 'react';
+import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 
-const baseUrl = 'https://joremadriz-api.herokuapp.com/comment';
-
-const commentService = new CommentService(baseUrl);
+const theme = createMuiTheme({
+  overrides: {
+    MuiTypography: {
+      body1: {
+        fontFamily: 'monospace',
+      },
+      h3: {
+        fontFamily: 'monospace',
+      },
+      h5: {
+        fontFamily: 'monospace',
+      }
+     },
+    MuiInputBase: {
+      input: {
+        color: 'white',
+      },
+    },
+    MuiOutlinedInput: {
+      root: {
+        '&$focused $notchedOutline': {
+          borderColor: 'white',
+          border: '0',
+        },
+      },
+    },
+    MuiInputLabel: {
+      root: {
+        'fontFamily': 'monospace',
+        'color': 'white',
+        '&$focused': { // increase the specificity for the pseudo class
+          color: 'white',
+        },
+      },
+    },
+    MuiButton: {
+      root: {
+        fontFamily: 'monospace',
+        color: 'white',
+        margin: '10px',
+      },
+      outlined: {
+        borderColor: 'white',
+      },
+    },
+  },
+});
 
 function App() {
-  const [comments, setComments] = useState([]);
-
-  async function getComments() {
-    const res = await commentService.getComments();
-    setComments(res);
-  }
-
-  useEffect(() => {
-    getComments();
-  }, []);
-
-
+  const baseUrl = 'https://joremadriz-api.herokuapp.com/comment';
+  const service = new CommentService(baseUrl);
   return (
-    <div className="App">
-      <body className="App-header">
-        <div className="Comment-form">
-          <CommentForm
-            service={commentService}
-            handleSubmitComment={setComments}
-            comments={comments}/>
-          <p>Last Comment : {comments[comments.length - 1]}</p>
-          <p>
-          Trying to build this website.
-          </p>
-          <SocialLinks/>
-        </div>
-        <Comments comments={comments} />
-      </body>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes service={service}/>
+      </Router>
+    </ThemeProvider>
+
+  )
 }
 
 export default App;

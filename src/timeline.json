@@ -1,0 +1,112 @@
+{
+    "data": [
+        {
+            "year": 2021,
+            "things": [
+                {
+                    "descrip": "Graduate from INA"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                }
+            ]
+        },
+        {
+            "year": 2020,
+            "things": [
+                {
+                    "descrip": "Move apartment"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                }
+            ]
+        },
+        {
+            "year": 2019,
+            "things": [
+                {
+                    "descrip": "Move apartment"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                }
+            ]
+        },
+        {
+            "year": 2018,
+            "things": [
+                {
+                    "descrip": "Move apartment"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                }
+            ]
+        },
+        {
+            "year": 2017,
+            "things": [
+                {
+                    "descrip": "Move apartment"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                },
+                {
+                    "descrip": "Move to live alone"
+                }
+            ]
+        },
+        {
+            "year": 2016,
+            "things": [
+                {
+                    "descrip": "- Graduated from computer programming (Instituto  Nacional de Aprendizaje)."
+                }
+            ]
+        }
+    ]
+}

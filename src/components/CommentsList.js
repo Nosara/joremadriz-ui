@@ -1,9 +1,9 @@
 import '../App.css';
 import React from 'react';
-import Comment from '../components/Comment';
+import Comment from './Comment';
 import PropTypes from 'prop-types';
 
-function Comments({comments}) {
+function CommentsList({comments}) {
   return (
     <div className="Comments">
       {comments && comments.map((comment) => {
@@ -13,12 +13,12 @@ function Comments({comments}) {
   );
 }
 
-export default Comments;
+export default CommentsList;
 
 const CommentsPropType = PropTypes.shape({
   comment: PropTypes.string,
 });
 
-Comments.propTypes = {
+CommentsList.propTypes = {
   comments: PropTypes.arrayOf(CommentsPropType).isRequired,
 };

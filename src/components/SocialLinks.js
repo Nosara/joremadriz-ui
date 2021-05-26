@@ -1,6 +1,7 @@
 import React from 'react';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import {makeStyles} from '@material-ui/core/styles';
 
 function pageChangeToInstagram() {
@@ -9,6 +10,10 @@ function pageChangeToInstagram() {
 
 function pageChangeToTwitter() {
   window.open('https://www.twitter.com/joremadriz');
+}
+
+function pageChangeToLinkedIn() {
+  window.open('https://www.linkedin.com/in/jorge-madriz-25b246156/');
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +37,10 @@ function SocialLinks() {
       <TwitterIcon
         onClick={pageChangeToTwitter}
         className={classes.clickableIcon}/>
+      <LinkedInIcon
+        onClick={pageChangeToLinkedIn}
+        className={classes.clickableIcon}
+      />
     </div>
   );
 }
